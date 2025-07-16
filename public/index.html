@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sussurros do Passado</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Fundo de Partículas -->
+    <div id="particles-js"></div>
+
+    <main class="content-wrapper">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="seal"></div>
+            </div>
+        </div>
+
+        <div class="interaction-zone">
+            <div class="input-group">
+                <input type="text" id="name" name="name" required>
+                <label for="name">Digite seu nome</label>
+            </div>
+            <button class="discover-button">Descobrir</button>
+        </div>
+
+        <div class="hints-container">
+            <p class="hint"></p>
+            <p class="hint"></p>
+            <p class="hint"></p>
+        </div>
+    </main>
+
+    <!-- Opcional: Música de fundo para imersão -->
+    <!--
+    <audio id="background-music" loop>
+        <source src="caminho/para/sua/musica.mp3" type="audio/mpeg">
+    </audio>
+    -->
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

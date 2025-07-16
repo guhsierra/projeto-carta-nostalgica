@@ -1,0 +1,199 @@
+/* Reset Básico e Configurações Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cormorant Garamond', serif;
+    background-color: #0c0a1a;
+    color: #e0e0e0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Fundo com Partículas */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-image: url('https://www.transparenttextures.com/patterns/stardust.png'); /* Textura sutil de estrelas */
+}
+
+/* Conteúdo Principal */
+.content-wrapper {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Envelope */
+.envelope-wrapper {
+    perspective: 800px;
+}
+
+.envelope {
+    width: 220px;
+    height: 140px;
+    background-color: #f3e5d8;
+    position: relative;
+    border-radius: 5px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    animation: float 6s ease-in-out infinite;
+}
+
+.envelope:hover {
+    transform: rotateY(10deg) rotateX(5deg);
+}
+
+.envelope::before,
+.envelope::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.envelope::before { /* Aba superior */
+    border-width: 70px 110px 0 110px;
+    border-color: #e9d8c8 transparent transparent transparent;
+    top: 0;
+}
+
+.envelope::after { /* Aba inferior */
+    border-width: 0 110px 70px 110px;
+    border-color: transparent transparent #fff0e1 transparent;
+    bottom: 0;
+}
+
+/* Selo de Cera */
+.seal {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #c0392b;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -85%);
+    box-shadow: 0 0 15px 5px rgba(231, 76, 60, 0.6);
+    animation: pulse 2s infinite;
+}
+
+.seal::before {
+    content: '♥';
+    font-size: 20px;
+    color: #e74c3c;
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Zona de Interação */
+.interaction-zone {
+    margin-top: 40px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 0;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(224, 224, 224, 0.5);
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Cormorant Garamond', serif;
+    outline: none;
+}
+
+.input-group label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    color: rgba(224, 224, 224, 0.7);
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.input-group input:focus + label,
+.input-group input:valid + label {
+    top: -15px;
+    font-size: 14px;
+    color: #e74c3c;
+}
+
+/* Botão */
+.discover-button {
+    background: transparent;
+    border: 1px solid #c0392b;
+    color: #c0392b;
+    padding: 10px 20px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.discover-button:hover {
+    background-color: #c0392b;
+    color: #fff;
+    box-shadow: 0 0 15px rgba(192, 57, 43, 0.7);
+}
+
+/* Dicas */
+.hints-container {
+    margin-top: 30px;
+    min-height: 80px;
+}
+
+.hint {
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+.hint.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animações */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 10px 3px rgba(231, 76, 60, 0.4); }
+    50% { box-shadow: 0 0 20px 8px rgba(231, 76, 60, 0.7); }
+    100% { box-shadow: 0 0 10px 3px rgba(231, 76, 60, 0.4); }
+}

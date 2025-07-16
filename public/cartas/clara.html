@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uma Carta Para Clara</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- ESTILOS GLOBAIS E PARA O SCROLL DA PÁGINA --- */
+        html {
+            scrollbar-width: thin;
+            scrollbar-color: #c0392b #0c0a1a;
+        }
+
+        html::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        html::-webkit-scrollbar-track {
+            background: #0c0a1a;
+        }
+
+        html::-webkit-scrollbar-thumb {
+            background-color: #c0392b;
+            border-radius: 20px;
+        }
+
+        /* --- CONFIGURAÇÕES DO CORPO DA PÁGINA --- */
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background-color: #0c0a1a;
+            /* AQUI ESTÁ A MUDANÇA QUE TRAZ O BRILHO DE VOLTA! */
+            background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+            margin: 0;
+            overflow-y: auto;
+        }
+
+        /* --- FUNDO INTERATIVO FIXO --- */
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+
+        /* --- CONTÊINER DO CONTEÚDO --- */
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 80px 20px;
+        }
+
+        /* --- ESTILOS ESPECÍFICOS PARA A PÁGINA DA CARTA --- */
+        .letter-content {
+            background-color: rgba(243, 229, 216, 0.9);
+            color: #333;
+            padding: 40px;
+            border-radius: 5px;
+            max-width: 600px;
+            text-align: left;
+            font-size: 20px;
+            line-height: 1.8;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+            animation: fadeIn 2s ease-in;
+        }
+
+        .letter-content h1 {
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #c0392b;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <main class="content-wrapper">
+        <div class="letter-content">
+            <h1>Querida Clara,</h1>
+            <p>
+                Nunca imaginei fazer isso — que jeito estranho de começar uma carta, né? Mas nesse seu aniversário, ao ver suas fotos, algo despertou em mim. Uma dor antiga que nunca contei pra ninguém… e resolvi transformá-la nesse projeto maluco.
+                <br>
+                Há alguns anos, meus pais decidiram se mudar de cidade. Foi difícil. Eu odiei a ideia de ter que deixar tanta gente pra trás. Queria que tivesse sido diferente — que eu tivesse mais idade, mais maturidade, ou pelo menos mais palavras pra explicar o quanto aquilo me doía. Mas o que podíamos fazer? Éramos só crianças. Acho que naquela época eu nem entendia o que estava sentindo.
+                <br>
+                O tempo passou, muita coisa mudou, e às vezes ainda me pego imaginando como teria sido minha vida se eu tivesse ficado em Curitiba. Irônico, né? Talvez eu ficasse pensando o contrário se tivesse ido embora de qualquer jeito. Tem coisas que simplesmente não dá pra entender.
+                <br>
+                Mas chega de falar de mim.<br>
+                Quero falar sobre nós.
+                <br>
+                Como começar a descrever alguém que foi tão especial pra mim? Talvez dizendo que, mesmo com o tempo e a distância, tem lembranças que nunca se apagam. Você foi, com certeza, a primeira pessoa com quem senti uma conexão de verdade. Lembro dos olhares, das risadas, daquela sensação de que a gente se entendia, mesmo sendo só duas crianças. Lembro dos olhares pós-prova, daqueles em que eu tentava disfarçar, mas às vezes você percebia — e aí eu ficava todo sem jeito kkkkk.
+                <br>
+                Mas não quero que essa carta soe só como nostalgia romântica. Nossa amizade foi muito legal, divertida, leve. E eu queria que tivesse durado mais. Você sempre foi gentil, educada, inteligente, boa em tudo que fazia. E mesmo sem te ver há tanto tempo, tenho certeza de que está se tornando uma mulher admirável. Daquelas que não passam despercebidas. Daquelas que fazem diferença.
+                <br>
+                Na verdade, o verdadeiro motivo de eu estar escrevendo essa carta não é apenas relembrar o passado, mas também ter a chance de dar um ponto final — ou talvez um ponto e vírgula — a algo que ficou em aberto. Como eu disse antes, a mudança me afetou profundamente. E até hoje, algo que me incomoda muito é não ter tido uma despedida. Nenhum último momento. Foi tudo tão rápido... as coisas passam num piscar de olhos.
+                <br>
+                Então, escrevo isso agora como uma forma de te dizer, do fundo do coração, que sempre vou guardar o que a gente viveu com muito carinho. Aquela fase da infância foi essencial pra formar quem eu sou hoje — e você fez parte dela. E por isso, meu muito obrigado.
+                <br>
+                Não escrevo isso esperando respostas. Nem encontros, nem explicações. Só queria registrar, de alguma forma, que você fez parte de um capítulo muito bonito da minha vida. Um que continua vivo na minha memória. E que, mesmo de longe, torço muito por você.
+            </p>
+        </div>
+    </main>
+
+    <!-- Script de partículas com a INTERATIVIDADE RESTAURADA -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('particles-js', {
+            "particles": {
+                "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+                "color": { "value": "#ffffff" },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.5, "random": true },
+                "size": { "value": 2, "random": true },
+                "line_linked": { "enable": false },
+                "move": { "enable": true, "speed": 1.2, "direction": "none", "random": true, "straight": false, "out_mode": "out" }
+            },
+            "interactivity": {
+                "detect_on": "window",
+                "events": {
+                    "onhover": { "enable": true, "mode": "grab" },
+                    "onclick": { "enable": true, "mode": "push" },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": { "distance": 140, "line_linked": { "opacity": 1 } },
+                    "push": { "particles_nb": 4 }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+</body>
+</html>
